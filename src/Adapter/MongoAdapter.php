@@ -112,7 +112,7 @@ class MongoAdapter extends OAuth2Mongo
     public function checkClientCredentials($clientId, $clientSecret = null)
     {
         if ($result = $this->collection('client_table')->findOne(['client_id' => $clientId])) {
-            return $this->verifyHash($clientSecret, $result['client_secret']);
+            return (isset($this->config['store_clear_client_secret']) && $this->config['store_clear_client_secret'] === true && $clientSecret === $result['client_secret']) || $this->verifyHash($clientSecret, $result['client_secret']);
         }
 
         return false;
