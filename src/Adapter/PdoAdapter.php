@@ -138,7 +138,7 @@ class PdoAdapter extends OAuth2Pdo
             $scope  = null;
         }
 
-        if (! empty($clientSecret)) {
+        if (! empty($clientSecret) && (!isset($this->config['store_clear_client_secret']) || $this->config['store_clear_client_secret'] === false)) {
             $this->createBcryptHash($clientSecret);
         }
         // if it exists, update it.

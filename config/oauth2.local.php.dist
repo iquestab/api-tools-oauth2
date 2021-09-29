@@ -32,5 +32,8 @@ return [
             'always_issue_new_refresh_token'    => false,
             'unset_refresh_token_after_use'     => true,
         ],
+        'storage_settings' => [
+            'store_clear_client_secret'         => false,
+        ]
     ],
 ];

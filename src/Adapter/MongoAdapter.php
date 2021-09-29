@@ -144,7 +144,7 @@ class MongoAdapter extends OAuth2Mongo
             $scope  = null;
         }
 
-        if (! empty($clientSecret)) {
+        if (! empty($clientSecret) && (!isset($this->config['store_clear_client_secret']) || $this->config['store_clear_client_secret'] === false)) {
             $this->createBcryptHash($clientSecret);
         }
 
