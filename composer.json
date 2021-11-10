@@ -25,7 +25,7 @@
         "php": "^7.3 || ~8.0.0",
         "bshaffer/oauth2-server-php": "^1.10",
         "laminas-api-tools/api-tools-api-problem": "^1.4",
-        "laminas-api-tools/api-tools-content-negotiation": "dev-http-request",
+        "laminas-api-tools/api-tools-content-negotiation": "1.6.x-dev",
         "laminas/laminas-crypt": "^3.4",
         "laminas/laminas-http": "^2.13",
         "laminas/laminas-mvc": "^2.7.15 || ^3.0.2",
@@ -78,11 +78,5 @@
     },
     "replace": {
         "zfcampus/zf-oauth2": "^1.5.0"
-    },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/bfoosness/api-tools-content-negotiation.git"
-        }
-    ]
+    }
 }
